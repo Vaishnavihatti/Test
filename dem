@@ -1,1 +1,14 @@
-w script to comare lager integer valluyes fro, a 'n' number of args using command line args
+w script to comare lager integer valluyes fro, a 'n' number of args using command line args#! /bin/bash
+
+vi compare.sh
+
+max=$1
+for num in "$@"
+do
+    if [ "$num" -gt "$max" ]; then
+        max=$num
+    fi
+done
+echo "The largest number is: $max"
+
+bash compare.sh 5 10 20 4 15
